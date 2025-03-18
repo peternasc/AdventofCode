@@ -1,4 +1,9 @@
-with open('08.txt','r',encoding='utf-8') as arquivo:
+import os
+
+diretorio_atual = os.path.dirname(os.path.abspath(__file__))
+caminho_arquivo = os.path.join(diretorio_atual,"..", "Input", "08.txt")
+
+with open(caminho_arquivo, "r", encoding="utf-8") as arquivo:
     linhas = arquivo.readlines()
 
 barras = 0

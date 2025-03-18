@@ -1,6 +1,10 @@
 import json
+import os
 
-with open('12.json', 'r') as file:
+diretorio_atual = os.path.dirname(os.path.abspath(__file__))
+caminho_arquivo = os.path.join(diretorio_atual,"..", "Input", "12.json")
+
+with open(caminho_arquivo, "r", encoding="utf-8") as file:
     dados = json.load(file)
 
 def soma_sem_red(obj):

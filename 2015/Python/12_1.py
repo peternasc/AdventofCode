@@ -1,6 +1,9 @@
 import re
+import os
 
-with open('12.txt','r',encoding='utf-8') as arq:
+diretorio_atual = os.path.dirname(os.path.abspath(__file__))
+caminho_arquivo = os.path.join(diretorio_atual,"..", "Input", "12.txt")
+with open(caminho_arquivo, "r", encoding="utf-8") as arq:
     arquivo = arq.read()
 
 

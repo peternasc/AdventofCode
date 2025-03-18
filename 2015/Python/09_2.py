@@ -1,5 +1,9 @@
 
 from itertools import permutations
+import os
+
+diretorio_atual = os.path.dirname(os.path.abspath(__file__))
+caminho_arquivo = os.path.join(diretorio_atual,"..", "Input", "09.txt")
 
 def verifica_valor(c1,c2,valores):
     if valores.get(c1) == None:
@@ -7,7 +11,7 @@ def verifica_valor(c1,c2,valores):
     else:
         return valores.get(c1)
 
-with open('09.txt','r',encoding='utf-8') as arquivo:
+with open(caminho_arquivo, "r", encoding="utf-8") as arquivo:
     linhas = arquivo.readlines()
 
 cord = ["London to Dublin = 464",
